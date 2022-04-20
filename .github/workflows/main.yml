@@ -4,7 +4,8 @@ env:
    EB_APPLICATION_NAME	    : "CICD-Flask_app2"
    EB_ENVIRONMENT_NAME      : "Cicdflaskapp2-env"
    DEPLOY_PACKAGE_NAME      : "flask_app_${{ github.sha }}.zip"
-   AWS_REGION_NAME          : "eu-central-1"
+   AWS_REGION_NAME          : "us-east-1"
+   AWS_DEFAULT_REGION       : "us-east-1"
 
 
 on:
