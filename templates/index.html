@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{title}}
+{% endblock %}
+
+{% block content %}
+
+<div class="p-5">
+    <h4 style="margin-bottom:35px" class="text-info">Welcome to this simple page</h4>
+    <form action="/" method = "POST">
+        <p>Your name: <input type = "text" name = "name" /></p>
+        <p><input type = "submit" value = "Submit" /></p>
+    </form>
+
+    {% if name %}
+        <p>Hello, {{name.title()}}!</p>
+    {% else %}
+        <p>Hello, World!</p>
+    {% endif %}
+</div>
+{% endblock %}
