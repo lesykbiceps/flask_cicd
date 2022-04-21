@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 from config import Config
+import sys
 
 app = Flask(__name__)
 app.config.from_object(Config)
@@ -10,6 +11,7 @@ def index():
     if request.method == 'POST':
         form_data = request.form
         name = request.form.get('name')
+        print(sys.path)
         return render_template('index.html', title='Home', name=name, form_data=form_data), 200
     name = request.form.get('name')
     return render_template('index.html', title='Home', name=name)
