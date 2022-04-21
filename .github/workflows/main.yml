@@ -45,11 +45,6 @@ jobs:
       - name: Git clone our repo
         uses: actions/checkout@v1
 
-      - name: Create .env
-        run: |
-          touch .env
-          echo SECRET_KEY=${{ secrets.SECRET_KEY }} >> .env
-
       - name: Create ZIP deployment package
         run:  zip -r ${{ env.DEPLOY_PACKAGE_NAME }} ./ -x *.git*
 
